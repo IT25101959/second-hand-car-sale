@@ -1,4 +1,4 @@
-ackage main.java.com.carshop.model;
+package com.carshop.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
