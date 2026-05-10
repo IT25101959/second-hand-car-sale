@@ -1,7 +1,6 @@
 package com.carshop.model;
 
-public class Customer {
-    package com.carshop.model;
+public class Customer {package com.carshop.model;
 
 
 import jakarta.persistence.*;
