@@ -123,7 +123,7 @@ secondhand-car-sale/
 │   │       └── car-placeholder.jpg
 │   └── application.properties
 │
-├── uploads/cars/                      # Uploaded images (auto-created)
+├── uploads/cars/                      
 ├── pom.xml
 └── README.md
 ```
