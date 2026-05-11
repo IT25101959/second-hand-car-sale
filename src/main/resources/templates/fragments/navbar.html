@@ -1,34 +1,73 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <body>
-<nav th:fragment="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm sticky-top">
+
+<nav th:fragment="navbar"
+     class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm sticky-top">
+
     <div class="container">
+
+        <!-- Logo -->
         <a class="navbar-brand fw-bold fs-4" th:href="@{/}">
             <i class="bi bi-car-front-fill text-warning me-2"></i>AutoDeals
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+
+        <!-- Mobile Toggle -->
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
+
+        <!-- Navbar Content -->
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+
+            <!-- LEFT SIDE LINKS -->
+            <ul class="navbar-nav me-auto align-items-lg-center gap-lg-1">
+
                 <li class="nav-item">
-                    <a class="nav-link px-3" th:href="@{/}" th:classappend="${currentUri == '/' ? 'active fw-semibold' : ''}">
+                    <a class="nav-link px-3"
+                       th:href="@{/}"
+                       th:classappend="${currentUri == '/' ? 'active fw-semibold' : ''}">
                         <i class="bi bi-house me-1"></i>Home
                     </a>
                 </li>
+
                 <li class="nav-item">
-                    <a class="nav-link px-3" th:href="@{/cars}" th:classappend="${currentUri != null and currentUri.startsWith('/cars') ? 'active fw-semibold' : ''}">
+                    <a class="nav-link px-3"
+                       th:href="@{/cars}"
+                       th:classappend="${currentUri != null and currentUri.startsWith('/cars') ? 'active fw-semibold' : ''}">
                         <i class="bi bi-search me-1"></i>Browse Cars
                     </a>
                 </li>
-                <li class="nav-item ms-lg-2">
-                    <a class="btn btn-warning btn-sm px-3 fw-semibold" th:href="@{/admin/dashboard}">
+
+            </ul>
+
+            <!-- RIGHT SIDE BUTTONS -->
+            <ul class="navbar-nav align-items-lg-center gap-2">
+
+                <!-- Register Button -->
+                <li class="nav-item">
+                    <a class="btn btn-warning btn-sm px-3 fw-semibold"
+                       th:href="@{/register}">
+                        <i class="bi bi-person-plus-fill me-1"></i>Register
+                    </a>
+                </li>
+
+                <!-- Admin Button -->
+                <li class="nav-item">
+                    <a class="btn btn-warning btn-sm px-3 fw-semibold"
+                       th:href="@{/admin/dashboard}">
                         <i class="bi bi-shield-lock me-1"></i>Admin
                     </a>
                 </li>
+
             </ul>
+
         </div>
     </div>
 </nav>
+
 </body>
 </html>
