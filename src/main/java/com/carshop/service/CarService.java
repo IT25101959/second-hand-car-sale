@@ -1,5 +1,6 @@
 package com.carshop.service;
 
+import com.carshop.model.Car;
 import com.carshop.repository.CarRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
